@@ -1,0 +1,129 @@
+/* Custom CSS for ESTUAIRE Admin */
+
+/* Primary color customization */
+:root {
+    --estuaire-primary: #f35453;
+    --estuaire-secondary: #eb316f;
+    --estuaire-primary-dark: #d1443c;
+    --estuaire-secondary-dark: #c8295e;
+}
+
+/* Button customizations */
+.btn-primary {
+    background-color: var(--estuaire-primary) !important;
+    border-color: var(--estuaire-primary) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--estuaire-primary-dark) !important;
+    border-color: var(--estuaire-primary-dark) !important;
+}
+
+.btn-secondary {
+    background-color: var(--estuaire-secondary) !important;
+    border-color: var(--estuaire-secondary) !important;
+}
+
+.btn-secondary:hover {
+    background-color: var(--estuaire-secondary-dark) !important;
+    border-color: var(--estuaire-secondary-dark) !important;
+}
+
+/* Link customizations */
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active {
+    background-color: var(--estuaire-primary) !important;
+}
+
+.accent-primary {
+    color: var(--estuaire-primary) !important;
+}
+
+/* Progress bars */
+.progress-bar {
+    background-color: var(--estuaire-primary) !important;
+}
+
+/* Form controls focus */
+.form-control:focus {
+    border-color: var(--estuaire-primary) !important;
+    box-shadow: 0 0 0 0.2rem rgba(243, 84, 83, 0.25) !important;
+}
+
+/* Custom dashboard styles */
+.dashboard-card {
+    background: linear-gradient(135deg, var(--estuaire-primary), var(--estuaire-secondary));
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-metric {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dashboard-label {
+    font-size: 1.1rem;
+    text-align: center;
+    opacity: 0.9;
+}
+
+/* Custom emoji styling */
+.emoji-icon {
+    font-size: 1.2em;
+    margin-right: 5px;
+}
+
+/* Dark mode enhancements */
+.skin-dark .dashboard-card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar brand styling */
+.brand-link {
+    font-weight: bold !important;
+    font-size: 1.1em !important;
+}
+
+/* Custom card styling for better organization */
+.app-card {
+    border-left: 4px solid var(--estuaire-primary);
+    transition: border-left-color 0.3s ease;
+}
+
+.app-card:hover {
+    border-left-color: var(--estuaire-secondary);
+}
+
+/* Future apps color coding */
+.achat-section {
+    border-left-color: var(--estuaire-primary) !important;
+}
+
+.emploie-section {
+    border-left-color: #28a745 !important;
+}
+
+.cmae-section {
+    border-left-color: #17a2b8 !important;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .dashboard-card {
+        margin: 5px;
+        padding: 15px;
+    }
+    
+    .dashboard-metric {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,750 @@
+/* =============================================
+   🌙 ESTUAIRE DARK MODE E-COMMERCE DASHBOARD
+   ============================================= */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* =============================================
+   🎯 ROOT VARIABLES - DARK MODE OPTIMIZED
+   ============================================= */
+:root {
+    /* Dark Mode Background Colors */
+    --bg-primary: #0F172A;
+    --bg-secondary: #1E293B;
+    --bg-tertiary: #334155;
+    --bg-card: #1A1F2E;
+    --bg-hover: #2D3748;
+    
+    /* Text Colors for Dark Mode - Pure White Focus */
+    --text-primary: #FFFFFF;
+    --text-secondary: #F1F5F9;
+    --text-muted: #CBD5E1;
+    
+    /* E-commerce Brand Colors (Vibrant for Dark Mode) */
+    --estuaire-primary: #818CF8;
+    --estuaire-secondary: #A78BFA;
+    --estuaire-success: #34D399;
+    --estuaire-warning: #FBBF24;
+    --estuaire-danger: #F87171;
+    --estuaire-info: #38BDF8;
+    
+    /* Modern Gradients for Dark Mode */
+    --gradient-primary: linear-gradient(135deg, #818CF8 0%, #A78BFA 100%);
+    --gradient-success: linear-gradient(135deg, #34D399 0%, #10B981 100%);
+    --gradient-warning: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
+    --gradient-danger: linear-gradient(135deg, #F87171 0%, #EF4444 100%);
+    
+    /* Dark Mode Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.7);
+    
+    /* Border Radius */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    
+    /* Typography */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+}
+
+/* =============================================
+   🌙 GLOBAL DARK MODE STYLES
+   ============================================= */
+body {
+    font-family: var(--font-family) !important;
+    font-weight: var(--font-weight-normal);
+    line-height: 1.6;
+    background: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Override Jazzmin defaults for dark mode */
+.wrapper, .content-wrapper {
+    background: var(--bg-primary) !important;
+}
+
+.main-header {
+    background: var(--bg-secondary) !important;
+    border-bottom: 1px solid var(--bg-tertiary) !important;
+}
+
+.main-sidebar {
+    background: var(--bg-secondary) !important;
+}
+
+/* =============================================
+   🎯 BRAND & HEADER STYLING
+   ============================================= */
+.brand-link {
+    font-weight: var(--font-weight-bold) !important;
+    font-size: 1.25rem !important;
+    background: var(--gradient-primary) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.navbar-brand {
+    font-weight: var(--font-weight-bold) !important;
+}
+
+/* =============================================
+   📊 DARK MODE DASHBOARD CARDS
+   ============================================= */
+.info-box {
+    background: var(--bg-card) !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: var(--shadow-md) !important;
+    border: 1px solid var(--bg-tertiary) !important;
+    transition: all 0.3s ease !important;
+    overflow: hidden;
+}
+
+.info-box:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg) !important;
+    border-color: var(--estuaire-primary) !important;
+}
+
+.info-box-icon {
+    border-radius: var(--radius-lg) 0 0 var(--radius-lg) !important;
+    background: var(--gradient-primary) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-box-text {
+    font-weight: var(--font-weight-semibold) !important;
+    color: var(--text-secondary) !important;
+}
+
+.info-box-number {
+    font-weight: var(--font-weight-bold) !important;
+    font-size: 1.5rem !important;
+    color: var(--text-primary) !important;
+}
+
+.info-box-content {
+    background: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+}
+
+/* =============================================
+   🛍️ PRODUCT & E-COMMERCE SPECIFIC STYLING
+   ============================================= */
+.field-get_price .form-control {
+    background: var(--gradient-success) !important;
+    color: white !important;
+    font-weight: var(--font-weight-bold) !important;
+    border: none !important;
+    border-radius: var(--radius-md) !important;
+}
+
+.field-get_status .form-control {
+    border-radius: var(--radius-md) !important;
+    font-weight: var(--font-weight-medium) !important;
+}
+
+.field-get_images_count .form-control {
+    background: #F3F4F6 !important;
+    border-radius: var(--radius-md) !important;
+}
+
+/* =============================================
+   📋 DARK MODE TABLES
+   ============================================= */
+.table {
+    background: var(--bg-card) !important;
+    border-radius: var(--radius-lg) !important;
+    overflow: hidden;
+    box-shadow: var(--shadow-md) !important;
+    color: var(--text-primary) !important;
+}
+
+.table thead th {
+    background: var(--gradient-primary) !important;
+    color: white !important;
+    font-weight: var(--font-weight-semibold) !important;
+    border: none !important;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+}
+
+.table tbody tr {
+    background: var(--bg-card) !important;
+    border-bottom: 1px solid var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+}
+
+.table tbody tr:hover {
+    background-color: var(--bg-hover) !important;
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+.table tbody td {
+    color: var(--text-primary) !important;
+    border-color: var(--bg-tertiary) !important;
+}
+
+/* =============================================
+   🎨 BUTTON ENHANCEMENTS
+   ============================================= */
+.btn {
+    border-radius: var(--radius-md) !important;
+    font-weight: var(--font-weight-medium) !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+    text-transform: none !important;
+}
+
+.btn-primary {
+    background: var(--gradient-primary) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.btn-success {
+    background: var(--gradient-success) !important;
+}
+
+.btn-warning {
+    background: var(--gradient-warning) !important;
+}
+
+.btn-danger {
+    background: var(--gradient-danger) !important;
+}
+
+/* =============================================
+   📱 SIDEBAR NAVIGATION
+   ============================================= */
+.main-sidebar {
+    border-radius: 0 var(--radius-lg) var(--radius-lg) 0 !important;
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.nav-sidebar .nav-item .nav-link {
+    border-radius: var(--radius-md) !important;
+    margin: 0.25rem 0.5rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.nav-sidebar .nav-item .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    transform: translateX(4px);
+}
+
+.nav-sidebar .nav-item .nav-link.active {
+    background: var(--gradient-primary) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+/* =============================================
+   🎯 DARK MODE FORMS
+   ============================================= */
+.form-control, .form-control:not(:disabled):not([readonly]) {
+    background: var(--bg-secondary) !important;
+    border-radius: var(--radius-md) !important;
+    border: 2px solid var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+    transition: all 0.3s ease !important;
+    font-weight: var(--font-weight-normal) !important;
+}
+
+.form-control:focus {
+    background: var(--bg-card) !important;
+    border-color: var(--estuaire-primary) !important;
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.2) !important;
+    color: var(--text-primary) !important;
+    transform: translateY(-1px);
+}
+
+.form-label, label {
+    font-weight: var(--font-weight-semibold) !important;
+    color: var(--text-secondary) !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.custom-select, select {
+    background: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+    border: 2px solid var(--bg-tertiary) !important;
+}
+
+.custom-select:focus, select:focus {
+    background: var(--bg-card) !important;
+    border-color: var(--estuaire-primary) !important;
+}
+
+/* =============================================
+   💎 SPECIAL EFFECTS & ANIMATIONS
+   ============================================= */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-wrapper {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* =============================================
+   🏆 PREMIUM STATUS BADGES
+   ============================================= */
+.badge {
+    border-radius: var(--radius-xl) !important;
+    font-weight: var(--font-weight-semibold) !important;
+    padding: 0.5rem 1rem !important;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.badge-success {
+    background: var(--gradient-success) !important;
+    color: white !important;
+}
+
+.badge-warning {
+    background: var(--gradient-warning) !important;
+    color: white !important;
+}
+
+.badge-danger {
+    background: var(--gradient-danger) !important;
+    color: white !important;
+}
+
+/* =============================================
+   📊 DARK MODE CARDS & WIDGETS
+   ============================================= */
+.card {
+    background: var(--bg-card) !important;
+    border-radius: var(--radius-xl) !important;
+    border: 1px solid var(--bg-tertiary) !important;
+    box-shadow: var(--shadow-md) !important;
+    transition: all 0.3s ease !important;
+    color: var(--text-primary) !important;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl) !important;
+    border-color: var(--estuaire-primary) !important;
+}
+
+.card-header {
+    background: var(--gradient-primary) !important;
+    color: white !important;
+    font-weight: var(--font-weight-semibold) !important;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0 !important;
+    border: none !important;
+}
+
+.card-body {
+    background: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+}
+
+.card-footer {
+    background: var(--bg-secondary) !important;
+    color: var(--text-secondary) !important;
+    border-top: 1px solid var(--bg-tertiary) !important;
+}
+
+/* =============================================
+   🎨 RESPONSIVE DESIGN
+   ============================================= */
+@media (max-width: 768px) {
+    .info-box {
+        margin-bottom: 1rem !important;
+    }
+    
+    .content-wrapper {
+        padding: 1rem !important;
+    }
+}
+
+/* =============================================
+   ✨ LOADING & TRANSITION EFFECTS
+   ============================================= */
+.loading-overlay {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: var(--radius-lg);
+}
+
+.spinner-border {
+    color: var(--estuaire-primary) !important;
+}
+
+/* =============================================
+   🏪 E-COMMERCE SPECIFIC COMPONENTS
+   ============================================= */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.product-card {
+    background: var(--bg-card);
+    border: 1px solid var(--bg-tertiary);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.price-tag {
+    background: var(--gradient-success);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-xl);
+    font-weight: var(--font-weight-bold);
+    display: inline-block;
+}
+
+.status-active {
+    background: var(--gradient-success);
+    color: white;
+}
+
+.status-pending {
+    background: var(--gradient-warning);
+    color: white;
+}
+
+.status-sold {
+    background: var(--gradient-danger);
+    color: white;
+}
+
+/* =============================================
+   🌙 ADDITIONAL DARK MODE OVERRIDES
+   ============================================= */
+   
+/* Breadcrumb styling */
+.breadcrumb {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--bg-tertiary) !important;
+}
+
+.breadcrumb-item a {
+    color: var(--estuaire-primary) !important;
+}
+
+.breadcrumb-item.active {
+    color: var(--text-secondary) !important;
+}
+
+/* Dropdown menus */
+.dropdown-menu {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--bg-tertiary) !important;
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.dropdown-item {
+    color: var(--text-primary) !important;
+}
+
+.dropdown-item:hover {
+    background: var(--bg-hover) !important;
+    color: var(--estuaire-primary) !important;
+}
+
+/* Pagination */
+.pagination .page-link {
+    background: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--bg-tertiary) !important;
+}
+
+.pagination .page-link:hover {
+    background: var(--bg-hover) !important;
+    color: var(--estuaire-primary) !important;
+    border-color: var(--estuaire-primary) !important;
+}
+
+.pagination .page-item.active .page-link {
+    background: var(--gradient-primary) !important;
+    border: none !important;
+    color: white !important;
+}
+
+/* Modals */
+.modal-content {
+    background: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--bg-tertiary) !important;
+}
+
+.modal-header {
+    background: var(--bg-secondary) !important;
+    border-bottom: 1px solid var(--bg-tertiary) !important;
+}
+
+.modal-footer {
+    background: var(--bg-secondary) !important;
+    border-top: 1px solid var(--bg-tertiary) !important;
+}
+
+/* Alerts */
+.alert {
+    background: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--bg-tertiary) !important;
+}
+
+/* Tabs */
+.nav-tabs {
+    border-bottom: 1px solid var(--bg-tertiary) !important;
+}
+
+.nav-tabs .nav-link {
+    color: var(--text-secondary) !important;
+    background: transparent !important;
+    border: 1px solid transparent !important;
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--estuaire-primary) !important;
+    border-color: transparent transparent var(--bg-tertiary) !important;
+}
+
+.nav-tabs .nav-link.active {
+    background: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+    border-color: var(--bg-tertiary) var(--bg-tertiary) var(--bg-card) !important;
+}
+
+/* Small box widgets */
+.small-box {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+}
+
+.small-box:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-xl) !important;
+}
+
+/* Content header */
+.content-header h1 {
+    color: var(--text-primary) !important;
+}
+
+/* Help text */
+.help-block, .form-text, .text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Links - White with subtle accent */
+a {
+    color: var(--text-primary) !important;
+}
+
+a:hover {
+    color: var(--estuaire-primary) !important;
+    text-decoration: none !important;
+}
+
+/* Special styling for primary action links */
+.btn-link, .nav-link {
+    color: var(--text-secondary) !important;
+}
+
+.btn-link:hover, .nav-link:hover {
+    color: var(--estuaire-primary) !important;
+}
+
+/* Override any white backgrounds */
+.bg-white {
+    background: var(--bg-card) !important;
+}
+
+.bg-light {
+    background: var(--bg-secondary) !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--estuaire-primary);
+}
+
+/* =============================================
+   📋 TOP NAVIGATION IMPROVEMENTS
+   ============================================= */
+
+/* Top navigation styling */
+.navbar .nav-item .nav-link {
+    color: var(--text-primary) !important;
+    font-weight: var(--font-weight-medium) !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: var(--radius-md) !important;
+    transition: all 0.3s ease !important;
+    margin: 0 0.25rem !important;
+}
+
+.navbar .nav-item .nav-link:hover {
+    background: rgba(129, 140, 248, 0.2) !important;
+    color: var(--estuaire-primary) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* User menu dropdown */
+.navbar .dropdown-menu {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--bg-tertiary) !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: var(--shadow-xl) !important;
+    margin-top: 0.5rem !important;
+}
+
+.navbar .dropdown-item {
+    color: var(--text-primary) !important;
+    font-weight: var(--font-weight-normal) !important;
+    padding: 0.75rem 1.5rem !important;
+    border-radius: var(--radius-md) !important;
+    margin: 0.25rem !important;
+}
+
+.navbar .dropdown-item:hover {
+    background: var(--bg-hover) !important;
+    color: var(--estuaire-primary) !important;
+}
+
+/* Brand styling */
+.navbar .navbar-brand {
+    font-weight: var(--font-weight-bold) !important;
+    color: var(--text-primary) !important;
+    font-size: 1.5rem !important;
+}
+
+/* Responsive navigation */
+@media (max-width: 991px) {
+    .navbar .nav-item .nav-link {
+        padding: 0.75rem !important;
+        margin: 0.125rem 0 !important;
+    }
+    
+    .navbar-nav {
+        flex-wrap: wrap !important;
+    }
+}
+
+/* Search box in navbar */
+.navbar .form-control {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+    border-radius: var(--radius-lg) !important;
+}
+
+.navbar .form-control:focus {
+    background: var(--bg-secondary) !important;
+    border-color: var(--estuaire-primary) !important;
+    box-shadow: 0 0 0 2px rgba(129, 140, 248, 0.2) !important;
+}
+
+.navbar .form-control::placeholder {
+    color: var(--text-muted) !important;
+}
+
+/* =============================================
+   🎯 SIDEBAR MENU ICONS ENHANCEMENT
+   ============================================= */
+
+/* Ensure FontAwesome icons display properly in sidebar */
+.nav-sidebar .nav-link i {
+    width: 20px !important;
+    text-align: center !important;
+    margin-right: 10px !important;
+    font-size: 16px !important;
+    color: var(--text-secondary) !important;
+}
+
+.nav-sidebar .nav-link:hover i {
+    color: var(--estuaire-primary) !important;
+}
+
+.nav-sidebar .nav-link.active i {
+    color: white !important;
+}
+
+/* Force FontAwesome icons to show */
+.nav-sidebar .nav-link .fas,
+.nav-sidebar .nav-link .far,
+.nav-sidebar .nav-link .fab {
+    display: inline-block !important;
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+}
+
+/* Specific icons styling */
+.nav-sidebar .nav-link[href*="customuser"] i::before {
+    content: "\f521" !important; /* fa-user-crown */
+}
+
+.nav-sidebar .nav-link[href*="product"] i::before {
+    content: "\f49e" !important; /* fa-box-open */
+}
+
+.nav-sidebar .nav-link[href*="category"] i::before {
+    content: "\f5fd" !important; /* fa-layer-group */
+}
+
+.nav-sidebar .nav-link[href*="subcategory"] i::before {
+    content: "\f802" !important; /* fa-folder-tree */
+}
+
+.nav-sidebar .nav-link[href*="location"] i::before {
+    content: "\f5a0" !important; /* fa-map-location-dot */
+}
+
+.nav-sidebar .nav-link[href*="usertoken"] i::before {
+    content: "\f084" !important; /* fa-key */
+}
